@@ -15,7 +15,7 @@ const Navbar = () => {
                 <Link
                     href="/workouts"
                     className={`${
-                        pathname === '/workouts'
+                        pathname.startsWith('/workouts')
                             ? 'bg-[#1A2312] text-[#C2F800]'
                             : 'hover:bg-[#1A2312] hover:text-[#C2F800]'
                     }`}
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <Link
                     href="/myPlans"
                     className={`${
-                        pathname === '/myPlans'
+                        pathname.startsWith('/myPlans')
                             ? 'bg-[#1A2312] text-[#C2F800]'
                             : 'hover:bg-[#1A2312] hover:text-[#C2F800]'
                     }`}
