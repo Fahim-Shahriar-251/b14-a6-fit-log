@@ -13,7 +13,7 @@ interface WorkoutCardPropsType {
 const WorkoutCard = ({ workOut }: WorkoutCardPropsType) => {
     return (
         <Link href={`workouts/${workOut.id}`}>
-            <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-500">
+            <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-300">
                 <div className='flex justify-center bg-gray-400'>
                     <Image src={workOut.image} alt='image' width={300} height={300}></Image>
                 </div>
@@ -36,7 +36,7 @@ const WorkoutCard = ({ workOut }: WorkoutCardPropsType) => {
                     <p>
                         {workOut.equipment}
                     </p>
-                    <hr className='text-gray-300' />
+                    <hr className='text-gray-200' />
                     <div className='flex gap-5'>
                         <div className='flex items-center gap-1'>
                             <IoIosTimer className='text-xl' />
