@@ -13,7 +13,7 @@ interface WorkoutCardPropsType {
 const WorkoutCard = ({ workOut }: WorkoutCardPropsType) => {
     return (
         <Link href={`workouts/${workOut.id}`}>
-            <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-300">
+            <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-300 hover:shadow-[0_10px_30px_rgba(194,248,0,0.4)]">
                 <div className='flex justify-center bg-gray-400'>
                     <Image src={workOut.image} alt='image' width={300} height={300}></Image>
                 </div>

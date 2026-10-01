@@ -14,11 +14,10 @@ const Navbar = () => {
             <li>
                 <Link
                     href="/workouts"
-                    className={`${
-                        pathname.startsWith('/workouts')
-                            ? 'bg-[#1A2312] text-[#C2F800]'
-                            : 'hover:bg-[#1A2312] hover:text-[#C2F800]'
-                    }`}
+                    className={`${pathname.startsWith('/workouts')
+                        ? 'bg-[#1A2312] text-[#C2F800]'
+                        : 'hover:bg-[#1A2312] hover:text-[#C2F800]'
+                        }`}
                 >
                     Workouts
                 </Link>
@@ -27,11 +26,10 @@ const Navbar = () => {
             <li>
                 <Link
                     href="/myPlans"
-                    className={`${
-                        pathname.startsWith('/myPlans')
-                            ? 'bg-[#1A2312] text-[#C2F800]'
-                            : 'hover:bg-[#1A2312] hover:text-[#C2F800]'
-                    }`}
+                    className={`${pathname.startsWith('/myPlans')
+                        ? 'bg-[#1A2312] text-[#C2F800]'
+                        : 'hover:bg-[#1A2312] hover:text-[#C2F800]'
+                        }`}
                 >
                     My Plan
                 </Link>

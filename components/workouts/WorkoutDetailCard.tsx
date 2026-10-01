@@ -77,7 +77,7 @@ const WorkoutDetailCard = ({ workoutData }: WorkoutDetailCardProps) => {
 
                 <div className='flex gap-4'>
                     <Link href={'/workouts'} className="btn btn-xs bg-[#C2F800] rounded-2xl border-0 sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-                        <MdEventAvailable/>Add to today&apos;s plan
+                        <MdEventAvailable />Add to today&apos;s plan
                     </Link>
                     <Link href={'/workouts'} className="btn btn-xs bg-[#C2F800] rounded-2xl border-0 sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
                         <MdDownloadDone />Save for later
