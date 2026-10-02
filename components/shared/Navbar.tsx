@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import navbarLogo from '@/assets/logo.png';
+import NavBarButton from './NavBarButton';
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -77,21 +78,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-end flex gap-2">
-                    <Link
-                        href="/"
-                        className="btn bg-[#ccff00] border-0 hover:bg-[#1A2312] hover:text-[#C2F800]"
-                    >
-                        Plan
-                    </Link>
-
-                    <Link
-                        href="/"
-                        className="btn border-[#ccff00] hover:bg-[#1A2312] hover:text-[#C2F800]"
-                    >
-                        Saved
-                    </Link>
-                </div>
+                <NavBarButton></NavBarButton>
 
             </div>
         </div>

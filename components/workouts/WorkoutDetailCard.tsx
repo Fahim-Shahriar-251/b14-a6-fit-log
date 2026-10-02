@@ -1,8 +1,7 @@
 import { WorkoutType } from '@/app/type';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
-import { MdDownloadDone, MdEventAvailable } from 'react-icons/md';
+import WorkoutDetailCardButton from './WorkoutDetailCardButton';
 
 interface WorkoutDetailCardProps {
     workoutData: WorkoutType;
@@ -104,23 +103,7 @@ const WorkoutDetailCard = ({ workoutData }: WorkoutDetailCardProps) => {
                 </div>
 
                 {/* Buttons */}
-                <div className='flex flex-col sm:flex-row gap-3 pt-2'>
-                    <Link
-                        href='/workouts'
-                        className='btn w-full sm:w-auto bg-[#C2F800] rounded-2xl border-0'
-                    >
-                        <MdEventAvailable />
-                        Add to today&apos;s plan
-                    </Link>
-
-                    <Link
-                        href='/workouts'
-                        className='btn w-full sm:w-auto bg-[#C2F800] rounded-2xl border-0'
-                    >
-                        <MdDownloadDone />
-                        Save for later
-                    </Link>
-                </div>
+                <WorkoutDetailCardButton workoutData={workoutData}></WorkoutDetailCardButton>
 
             </div>
         </div>
