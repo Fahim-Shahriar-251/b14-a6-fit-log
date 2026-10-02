@@ -31,16 +31,15 @@ const MyPlansPage = () => {
 
     return (
         <div className='min-h-screen'>
-
             <div className='text-end'>
                 <select
                     value={sortBy}
                     onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
                         setSortBy(e.target.value as "calories" | "duration" | "rating")
                     }
-                    className="select select-accent"
+                    className="select select-success border border-[#C2F800]"
                 >
-                    
+
                     <option value={"calories"}>Calories</option>
                     <option value={"duration"} >Duration</option>
                     <option value={"rating"} >Rating</option>
@@ -49,23 +48,32 @@ const MyPlansPage = () => {
 
             {/* name of each tab group should be unique */}
             <div className="tabs tabs-box mt-5">
-                <input type="radio" name="my_tabs_6" className="tab" aria-label="Today's Plan" defaultChecked />
+                <input type="radio" name="my_tabs_6"
+                    className="tab" aria-label="Today's Plan"
+                    defaultChecked
+                    onChange={() => myPlansProvider.setActiveTab("todaysPlan")} />
                 <div className="tab-content p-6">
                     {sortedTodaysPlans.length > 0 ?
-                        sortedTodaysPlans.map(todaysPlan => (
-                            <TodaysPlanCard key={todaysPlan.id} todaysPlan={todaysPlan}></TodaysPlanCard>
-                        ))
+                        <>
+                            {sortedTodaysPlans.map(todaysPlan => (
+                                <TodaysPlanCard key={todaysPlan.id} todaysPlan={todaysPlan}></TodaysPlanCard>
+                            ))}
+                        </>
                         :
                         <EmptyMyPlanCard></EmptyMyPlanCard>
                     }
                 </div>
 
-                <input type="radio" name="my_tabs_6" className="tab" aria-label="Saved" />
+                <input type="radio" name="my_tabs_6"
+                    className="tab" aria-label="Saved"
+                    onChange={() => myPlansProvider.setActiveTab("saved")} />
                 <div className="tab-content p-6">
                     {sortedSavedPlans.length > 0 ?
-                        sortedSavedPlans.map(savedPlan => (
-                            <SavedPlanCard key={savedPlan.id} savedPlan={savedPlan}></SavedPlanCard>
-                        ))
+                        <>
+                            {sortedSavedPlans.map(savedPlan => (
+                                <SavedPlanCard key={savedPlan.id} savedPlan={savedPlan}></SavedPlanCard>
+                            ))}
+                        </>
                         :
                         <EmptyMyPlanCard></EmptyMyPlanCard>
                     }

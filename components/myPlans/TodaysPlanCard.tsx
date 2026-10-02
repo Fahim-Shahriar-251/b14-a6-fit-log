@@ -7,13 +7,13 @@ import { AiTwotoneFire } from 'react-icons/ai';
 import { FaRegStar } from 'react-icons/fa';
 
 interface todaysPlanPropsType {
-    todaysPlan: WorkoutType
+    todaysPlan: WorkoutType;
 }
 
 const TodaysPlanCard = ({ todaysPlan }: todaysPlanPropsType) => {
     return (
-        <div className='flex justify-between items-center mb-5 border rounded-2xl border-gray-300 p-3'>
-            <div className='flex gap-5'>
+        <div className='flex flex-col space-y-5 md:flex-row justify-between items-center mb-5 border rounded-2xl border-gray-300 p-3'>
+            <div className='flex flex-col items-center md:flex-row gap-5'>
                 <div>
                     <Image className='rounded-2xl' src={todaysPlan.image} alt='image' width={125} height={125}></Image>
                 </div>

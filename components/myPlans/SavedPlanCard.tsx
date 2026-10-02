@@ -6,15 +6,15 @@ import { FaRegStar } from 'react-icons/fa';
 import { IoIosTimer } from 'react-icons/io';
 import SavedPlanCardButton from './SavedPlanCardButton';
 
-interface savedPlanPropsType{
+interface savedPlanPropsType {
     savedPlan: WorkoutType;
 }
 
-const SavedPlanCard = ({savedPlan}: savedPlanPropsType) => {
+const SavedPlanCard = ({ savedPlan }: savedPlanPropsType) => {
     return (
         <div>
-            <div className='flex justify-between items-center mb-5 border rounded-2xl border-gray-300 p-3'>
-                <div className='flex gap-5'>
+            <div className='flex flex-col space-y-5 md:flex-row justify-between items-center mb-5 border rounded-2xl border-gray-300 p-3'>
+                <div className='flex flex-col items-center md:flex-row gap-5'>
                     <div>
                         <Image className='rounded-2xl' src={savedPlan.image} alt='image' width={125} height={125}></Image>
                     </div>

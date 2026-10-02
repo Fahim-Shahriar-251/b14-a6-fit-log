@@ -14,15 +14,15 @@ const SavedPlanCardButton = ({ savedPlan }: savedPlanPropsType) => {
     const myPlanProvider = useContext(MyPlansContext);
 
     const handleDeleteSavedPlan = (savedPlan: WorkoutType) => {
-        const updatedPlans = myPlanProvider.todaysPlans.filter(plan => {
+        const updatedPlans = myPlanProvider.savedPlans.filter(plan => {
             return plan.id != savedPlan.id
-        })
-        myPlanProvider.setTodaysPlans(updatedPlans);
+        });
+        myPlanProvider.setSavedPlans(updatedPlans);
         toast.error(`Successfully removed ${savedPlan.name} from today's plan`);
     }
 
     return (
-        <div className='flex items-center gap-5'>
+        <div className='flex flex-col md:flex-row items-center gap-5'>
             <Link href={`workouts/${savedPlan.id}`}
                 className="bg-[#C2F800] hover:bg-[#1A2312] hover:text-[#C2F800] p-3 rounded-2xl font-bold btn btn-xs sm:btn-sm md:btn-md">
                 View Details

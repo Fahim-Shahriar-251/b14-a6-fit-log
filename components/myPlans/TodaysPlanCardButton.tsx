@@ -30,7 +30,7 @@ const TodaysPlanCardButton = ({ todaysPlan }: todaysPlanPropsType) => {
     }
 
     return (
-        <div className='flex items-center gap-5'>
+        <div className='flex flex-col md:flex-row items-center gap-5'>
             <Link href={`workouts/${todaysPlan.id}`}
                 className="bg-[#C2F800] hover:bg-[#1A2312] hover:text-[#C2F800] p-3 rounded-2xl font-bold btn btn-xs sm:btn-sm md:btn-md">
                 View Details

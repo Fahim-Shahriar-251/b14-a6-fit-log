@@ -20,7 +20,7 @@ const WorkoutsHomePage = async () => {
     return (
         <div className='grid gap-5 mb-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             {
-                workoutsData.slice(0,12).map(workOut => {
+                workoutsData.slice(0, 12).map(workOut => {
                     return (
                         <WorkoutCard key={workOut.id} workOut={workOut}></WorkoutCard>
                     )

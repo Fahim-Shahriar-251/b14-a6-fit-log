@@ -21,7 +21,7 @@ const Banner = () => {
                     </p>
                     <div>
                         <Link href={'/workouts'} className="btn btn-xs bg-[#C2F800] border-0 sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-                        BROWSE WORKOUTS
+                            BROWSE WORKOUTS
                         </Link>
                     </div>
                 </div>

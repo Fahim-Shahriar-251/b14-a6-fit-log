@@ -25,7 +25,7 @@ const WorkoutDetailCardButton = ({ workoutData }: { workoutData: WorkoutType }) 
         const alreayExists = myPlansProvider.savedPlans.some(
             (plan) => plan.id === workoutData.id
         );
-        if(alreayExists){
+        if (alreayExists) {
             toast.error("Already exists!");
             return;
         }
