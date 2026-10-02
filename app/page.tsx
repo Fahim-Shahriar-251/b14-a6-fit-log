@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Banner from '../components/workouts/Banner';
 import WorkoutsHomePage from '@/components/workouts/Workouts';
+import WorkoutLoading from '@/components/workouts/WorkoutLoading';
 
 const WorkoutsPage = async () => {
 
@@ -12,7 +13,9 @@ const WorkoutsPage = async () => {
                     <h2 className='font-extrabold text-3xl'>THE LIBRARY</h2>
                     <p className='text-gray-700'>Twelve lifts covering every major muscle group.</p>
                 </div>
-                <WorkoutsHomePage></WorkoutsHomePage>
+                <Suspense fallback={<WorkoutLoading></WorkoutLoading>}>
+                    <WorkoutsHomePage></WorkoutsHomePage>
+                </Suspense>
             </div>
         </div>
     );

@@ -32,6 +32,7 @@ const MyPlansPage = () => {
     return (
         <div className='min-h-screen'>
             <div className='text-end'>
+                <h2 className='font-semibold text-gray-500'>Sort By </h2>
                 <select
                     value={sortBy}
                     onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
@@ -49,7 +50,7 @@ const MyPlansPage = () => {
             {/* name of each tab group should be unique */}
             <div className="tabs tabs-box mt-5">
                 <input type="radio" name="my_tabs_6"
-                    className="tab" aria-label="Today's Plan"
+                    className="tab font-semibold" aria-label="Today's Plan"
                     defaultChecked
                     onChange={() => myPlansProvider.setActiveTab("todaysPlan")} />
                 <div className="tab-content p-6">
@@ -65,7 +66,7 @@ const MyPlansPage = () => {
                 </div>
 
                 <input type="radio" name="my_tabs_6"
-                    className="tab" aria-label="Saved"
+                    className="tab font-semibold" aria-label="Saved"
                     onChange={() => myPlansProvider.setActiveTab("saved")} />
                 <div className="tab-content p-6">
                     {sortedSavedPlans.length > 0 ?

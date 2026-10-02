@@ -32,18 +32,26 @@ const MyPlanLayoutCard = () => {
     }
 
     return (
-        <div className='flex justify-between items-center border border-gray-300 rounded-2xl p-6'>
-            <div className='space-y-5'>
-                <h2 className='font-semibold text-gray-500 '>Exercises</h2>
-                <h2 className='font-extrabold text-4xl text-[#C2F800]'>{exercises}</h2>
+        <div className="grid grid-cols-3 gap-3 border border-gray-300 rounded-2xl p-4 sm:p-6">
+            <div className="text-center space-y-2 sm:space-y-5 border-r border-gray-300 last:border-r-0">
+                <h2 className="font-semibold text-gray-500">Exercises</h2>
+                <h2 className="font-extrabold text-3xl sm:text-4xl text-[#C2F800]">
+                    {exercises}
+                </h2>
             </div>
-            <div className='space-y-5'>
-                <h2 className='font-semibold text-gray-500'>Minutes</h2>
-                <h2 className='font-extrabold text-4xl text-[#C2F800]'>{minutes}</h2>
+
+            <div className="text-center space-y-2 sm:space-y-5 border-r border-gray-300 last:border-r-0">
+                <h2 className="font-semibold text-gray-500">Minutes</h2>
+                <h2 className="font-extrabold text-3xl sm:text-4xl text-[#C2F800]">
+                    {minutes}
+                </h2>
             </div>
-            <div className='space-y-5'>
-                <h2 className='font-semibold text-gray-500'>Calories</h2>
-                <h2 className='font-extrabold text-4xl text-[#C2F800]'>{calories}</h2>
+
+            <div className="text-center space-y-2 sm:space-y-5">
+                <h2 className="font-semibold text-gray-500">Calories</h2>
+                <h2 className="font-extrabold text-3xl sm:text-4xl text-[#C2F800]">
+                    {calories}
+                </h2>
             </div>
         </div>
     );
