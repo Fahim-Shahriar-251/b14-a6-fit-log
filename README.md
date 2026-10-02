@@ -1,6 +1,9 @@
 ## Project Name
 FITLOG
 
+## Live Link
+https://b14-a6-fit-log-tau.vercel.app/
+
 ## Short Description
 
 A modern workout library and planning app built with Next.js, TypeScript, Tailwind CSS, and daisyUI.
