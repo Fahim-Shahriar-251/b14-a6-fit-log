@@ -1,10 +1,11 @@
+## Project Name
 FITLOG
 
-Short Description
+## Short Description
 
 A modern workout library and planning app built with Next.js, TypeScript, Tailwind CSS, and daisyUI.
 
-Technologies Used
+## Technologies Used
 
 1. Next.js — Used to build the UI.
 2. Next.js App Router — Used for page navigation.
@@ -12,7 +13,7 @@ Technologies Used
 4. TypeScript — Used for type-safe development.
 5. daisyUI — Used for UI components.
 
-Key Features
+## Key Features
 
 1. A modern workout library.
 2. Add workouts to today’s plan.
